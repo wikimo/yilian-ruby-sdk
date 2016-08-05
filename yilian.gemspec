@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Yilian print sdk.}
   spec.description   = %q{Yilian print sdk.}
-  spec.homepage      = "https://cmcm.us"
+  spec.homepage      = "https://github.com/wikimo/yilian-ruby-sdk"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
