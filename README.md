@@ -23,19 +23,28 @@ Or install it yourself as:
 ## Usage
 
 ```
+# usage in test.rb
 
-print = Yilian::Print.new 'api_key'
+require 'yilian'
 
-opts = {
-  partner: '123',
-  machine_code: '1234511789',
-  mobilephone: '',
-  username: 'wikimo',
-  printname: 'cm-01',
-  msign: '123123123'
+config = {
+  api_key: '',
+  partner: '',
+  username: '',
+  machine_code: '',
+  msign: '',
+  printname: '',
 }
 
-print.create(opts).body
+print =  Yilian::Print.new(config)
+
+opts ={
+  machine_code: config[:machine_code],
+  msign: config[:msign],
+  content: '打印测试....'
+}
+
+p print.print(opts)
 
 ```
 
@@ -47,7 +56,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yilian.
+Bug reports and pull requests are welcome on GitHub at https://github.com/wikimo/yilian.
 
 
 
